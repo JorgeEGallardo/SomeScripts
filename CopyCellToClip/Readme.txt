@@ -1,0 +1,2 @@
+Algorithm to copy the text of whichever element you want to clipboard using JS code and HTML tags. 
+Algoritmo para copiar el texto de cualquier elemento deseado al portapapeles usando código JS y etiquetas de HTML. 
