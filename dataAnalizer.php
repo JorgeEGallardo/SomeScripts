@@ -1,7 +1,7 @@
 <?php
 
 use PhpParser\Node\Stmt\Echo_;
-
+/*
 $raw = '
 Día 1
 Desayuno:
@@ -63,7 +63,7 @@ Agua de fruta
 
 
 
- 
+
 
 Día 3
 Desayuno:
@@ -120,7 +120,7 @@ Agua de fruta
 
 
 
- 
+
 
 Día 5
 
@@ -184,7 +184,7 @@ Agua de fruta
 
 
 
- 
+
 
 Día 7
 
@@ -325,7 +325,7 @@ Agua de fruta
 
 
 
- 
+
 
 Día 11
 
@@ -385,7 +385,7 @@ Agua de fruta
 
 
 
- 
+
 Día 13
 
 Desayuno:
@@ -448,7 +448,7 @@ Cena:
 Agua de fruta
 
 
- 
+
 Día 15:
 
 Desayuno:
@@ -472,6 +472,8 @@ Colación:
 Cena:
 Sándwich con crema de cacahuate
 1 taza de fruta picada';
+*/
+$raw = $_POST['raw'];
 
 $menu = array(); //Aqui se va a guardar $raw separado por palabras.
 $day = array(); //Aqui van todas las comidas guardadas por dia.
