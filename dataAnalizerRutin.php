@@ -5,13 +5,17 @@ $menu = preg_split('/\r+/', $data);
 $isFirst=true;
 
 class rutine{
-    public $name;
     public $exer;
     public $series;
     public $repetitions;
     public $intensity;
     public $rest;
     public $zelda;
+}
+class fullroutines{
+
+    public $nameRoutine = "";
+    public $fullroutines = array();
 }
 $name="";
 $series="";
@@ -37,6 +41,7 @@ for ($i=0;$i<count($menu);$i++){
 }
 echo "</table>";
 $routines = array();
+$fullroutines = new fullroutines();
 $namae = "";
 for ($i=0;$i<count($menu);$i++){
    $rutine = new rutine;
@@ -45,6 +50,8 @@ for ($i=0;$i<count($menu);$i++){
     for ($j=0;$j<count($cells);$j++){
         if (strpos($cells[$j],"Día")!==false){
             $namae = $cells[$j];
+            array_push($fullroutines->fullroutines, $routines);
+            $routines = array();
         }else {
         if (strlen($cells[0])>10&&!(strpos($cells[0],"Ejerci")!==false && strpos($cells[1],"Seri")!==false)){
             $limit = count($cells);
@@ -61,11 +68,12 @@ for ($i=0;$i<count($menu);$i++){
             if ($limit>5)
             $rutine->zelda = $cells[5];
             $j = 40;
-            $rutine->name = $namae;
+            $fullroutines->nameRoutine = $namae;
             array_push($routines, $rutine);
         }
     }}
     echo "</tr>";
 }
 echo "</table>";
-print(json_encode($routines));
+
+print(json_encode($fullroutines));
