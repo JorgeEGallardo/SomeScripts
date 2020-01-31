@@ -1,2 +1,2 @@
 # SomeScripts
-This are some scripts that i usually use
+These are some scripts that I usually use
